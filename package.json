@@ -2,7 +2,7 @@
   "name": "linter-golinter",
   "linter-package": true,
   "main": "./lib/init",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Check Go files with golint tool",
   "keywords": [
     "go",
