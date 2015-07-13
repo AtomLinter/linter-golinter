@@ -47,7 +47,7 @@ module.exports =
 
             stdout: (data) ->
               matches = data.match regex
-              if matches?.length >= 4
+              if matches?.length > 4
                 errors.push
                   type: 'warning'
                   text: matches[4]
