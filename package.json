@@ -1,7 +1,6 @@
 {
   "name": "linter-golinter",
-  "linter-package": true,
-  "main": "./lib/init",
+  "main": "./init",
   "version": "0.1.0",
   "description": "Check Go files with golint tool",
   "keywords": [
@@ -19,6 +18,16 @@
   "homepage": "https://github.com/AtomLinter/linter-golinter",
   "license": "MIT",
   "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+    "atom": ">=0.174.0"
+  },
+  "dependencies": {
+    "atom-linter": "^3.0.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
   }
 }
