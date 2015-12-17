@@ -15,7 +15,7 @@ $ apm install linter-golinter
 You must configure linter-golinter by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):
 ```
 'linter-golinter':
-  'executablePath': path to golint executable. Use `which golint` to find it out.
+  'executablePath': path to golint executable. Use the command `which golint` in a terminal/command prompt to print the path to your golint installation – in most cases it should be $GOPATH/bin/golint.
 ```
 
 ## Contributing
