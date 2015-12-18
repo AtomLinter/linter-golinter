@@ -1,36 +1,34 @@
-linter-golinter
-=========================
+# linter-golinter
 
-This linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to [golint](https://github.com/golang/lint) tool. It will be used with files that have the `Go` syntax.
+This plugin for [Linter][linter] provides an interface to the
+[golint](https://github.com/golang/lint) tool. It will be used
+with files that have the `Go` syntax.
 
 ## Installation
-Linter package must be installed in order to use this plugin. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).
+
+Linter package must be installed in order to use this plugin. If Linter is not
+installed, please follow the instructions
+[here][linter].
 
 ### Plugin installation
-```
+
+```ShellSession
 $ apm install linter-golinter
 ```
 
 ## Settings
-You must configure linter-golinter by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):
+
+You can configure linter-golinter inside the Atom settings menu or by editing
+your ``~/.atom/config.cson` file (choose Open Your Config in Atom menu):
+
+```CoffeeScript
+"linter-golinter":
+  "executablePath": "golint" # Path to golint executable.
 ```
-'linter-golinter':
-  'executablePath': path to golint executable. Use the command `which golint` in a terminal/command prompt to print the path to your golint installation – in most cases it should be $GOPATH/bin/golint.
-```
 
-## Contributing
-If you would like to contribute enhancements or fixes, please do the following:
+_If the default path resolution of just `golint` is not working for you, you
+can use the command `which golint` on UNIX / OS X or `where.exe golint` on
+Windows in a terminal / command prompt to print the path to your `golint`
+installation. In most cases it should be `$GOPATH/bin/golint`._
 
-1. Fork the plugin repository.
-1. Hack on a separate topic branch created from the latest `master`.
-1. Commit and push the topic branch.
-1. Make a pull request.
-1. welcome to the club
-
-Please note that modifications should follow these coding guidelines:
-
-- Indent is 2 spaces.
-- Code should pass coffeelint linter.
-- Vertical whitespace helps readability, don’t be afraid to use it.
-
-Thank you for helping out!
+[linter]: https://github.com/atom-community/linter
