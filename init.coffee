@@ -39,6 +39,8 @@ module.exports =
       default: '-min_confidence=0.8'
 
   activate: ->
+    require('atom-package-deps').install()
+
     linterName = 'linter-golinter'
 
     @subscriptions = new CompositeDisposable

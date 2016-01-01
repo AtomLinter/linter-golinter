@@ -6,12 +6,6 @@ with files that have the `Go` syntax.
 
 ## Installation
 
-Linter package must be installed in order to use this plugin. If Linter is not
-installed, please follow the instructions
-[here][linter].
-
-### Plugin installation
-
 ```ShellSession
 $ apm install linter-golinter
 ```
