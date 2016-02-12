@@ -39,7 +39,7 @@ module.exports =
       default: '-min_confidence=0.8'
 
   activate: ->
-    require('atom-package-deps').install()
+    require('atom-package-deps').install('linter-golinter')
 
     linterName = 'linter-golinter'
 
