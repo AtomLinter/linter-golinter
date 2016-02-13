@@ -1,7 +1,8 @@
-{CompositeDisposable} = require 'atom'
+{ CompositeDisposable } = require 'atom'
+helpers = null
 
 lint = (editor, command, options) ->
-  helpers = require('atom-linter')
+  helpers ?= require('atom-linter')
   regex = '(?<file>.+):(?<line>\\d+):(?<col>\\d+):\\s(?<message>.+)'
   file = editor.getPath()
 
