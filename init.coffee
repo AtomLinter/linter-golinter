@@ -8,9 +8,15 @@ lint = (editor, command, options) ->
   helpers.exec(command, [options, file], {stream: 'both'}).then (output) ->
     warnings = helpers.parse(output.stdout, regex).map (message) ->
       message.type = 'Warning'
+      line = message.range[0][0]
+      col = message.range[0][1]
+      message.range = helpers.rangeFromLineNumber(editor, line, col)
       message
     errors = helpers.parse(output.stderr, regex).map (message) ->
       message.type = 'Error'
+      line = message.range[0][0]
+      col = message.range[0][1]
+      message.range = helpers.rangeFromLineNumber(editor, line, col)
       message
     return warnings.concat(errors)
 
