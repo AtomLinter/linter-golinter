@@ -1,29 +1,18 @@
-{BufferedProcess, CompositeDisposable} = require 'atom'
+{CompositeDisposable} = require 'atom'
 
 lint = (editor, command, options) ->
   helpers = require('atom-linter')
   regex = '(?<file>.+):(?<line>\\d+):(?<col>\\d+):\\s(?<message>.+)'
   file = editor.getPath()
 
-  new Promise (resolve, reject) ->
-    stdout = ''
-    stderr = ''
-
-    new BufferedProcess
-      command: command
-      args: [options, file]
-      stdout: (data) -> stdout += data
-      stderr: (data) -> stderr += data
-      exit: ->
-        warnings = helpers.parse(stdout, regex).map (message) ->
-          message.type = 'warning'
-          message
-
-        errors = helpers.parse(stderr, regex).map (message) ->
-          message.type = 'error'
-          message
-
-        resolve warnings.concat(errors)
+  helpers.exec(command, [options, file], {stream: 'both'}).then (output) ->
+    warnings = helpers.parse(output.stdout, regex).map (message) ->
+      message.type = 'Warning'
+      message
+    errors = helpers.parse(output.stderr, regex).map (message) ->
+      message.type = 'Error'
+      message
+    return warnings.concat(errors)
 
 module.exports =
   config:
