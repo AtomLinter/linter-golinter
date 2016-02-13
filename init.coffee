@@ -55,4 +55,5 @@ module.exports =
       grammarScopes: ['source.go']
       scope: 'file'
       lintOnFly: false
+      name: 'Golint'
       lint: (editor) => lint editor, @executablePath, @extraOptions
