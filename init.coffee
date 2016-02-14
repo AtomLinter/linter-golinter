@@ -1,29 +1,25 @@
-{BufferedProcess, CompositeDisposable} = require 'atom'
+{ CompositeDisposable } = require 'atom'
+helpers = null
 
 lint = (editor, command, options) ->
-  helpers = require('atom-linter')
+  helpers ?= require('atom-linter')
   regex = '(?<file>.+):(?<line>\\d+):(?<col>\\d+):\\s(?<message>.+)'
   file = editor.getPath()
 
-  new Promise (resolve, reject) ->
-    stdout = ''
-    stderr = ''
-
-    new BufferedProcess
-      command: command
-      args: [options, file]
-      stdout: (data) -> stdout += data
-      stderr: (data) -> stderr += data
-      exit: ->
-        warnings = helpers.parse(stdout, regex).map (message) ->
-          message.type = 'warning'
-          message
-
-        errors = helpers.parse(stderr, regex).map (message) ->
-          message.type = 'error'
-          message
-
-        resolve warnings.concat(errors)
+  helpers.exec(command, [options, file], {stream: 'both'}).then (output) ->
+    warnings = helpers.parse(output.stdout, regex).map (message) ->
+      message.type = 'Warning'
+      line = message.range[0][0]
+      col = message.range[0][1]
+      message.range = helpers.rangeFromLineNumber(editor, line, col)
+      message
+    errors = helpers.parse(output.stderr, regex).map (message) ->
+      message.type = 'Error'
+      line = message.range[0][0]
+      col = message.range[0][1]
+      message.range = helpers.rangeFromLineNumber(editor, line, col)
+      message
+    return warnings.concat(errors)
 
 module.exports =
   config:
@@ -39,7 +35,7 @@ module.exports =
       default: '-min_confidence=0.8'
 
   activate: ->
-    require('atom-package-deps').install()
+    require('atom-package-deps').install('linter-golinter')
 
     linterName = 'linter-golinter'
 
@@ -58,5 +54,6 @@ module.exports =
     provider =
       grammarScopes: ['source.go']
       scope: 'file'
-      lintOnFly: true
+      lintOnFly: false
+      name: 'Golint'
       lint: (editor) => lint editor, @executablePath, @extraOptions
