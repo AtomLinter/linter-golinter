@@ -1,7 +1,38 @@
 # Change Log
 
-## [1.1.0](https://github.com/AtomLinter/linter-golinter/tree/1.1.0) (2015-12-30)
-[Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.0.0...1.1.0)
+## [1.2.0](https://github.com/AtomLinter/linter-golinter/tree/1.2.0) (2016-02-13)
+[Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.1.0...1.2.0)
+
+**Implemented enhancements:**
+
+- Implement specs [\#18](https://github.com/AtomLinter/linter-golinter/issues/18)
+- Add CI Configurations [\#28](https://github.com/AtomLinter/linter-golinter/pull/28) ([Arcanemagus](https://github.com/Arcanemagus))
+- Add specs [\#27](https://github.com/AtomLinter/linter-golinter/pull/27) ([Arcanemagus](https://github.com/Arcanemagus))
+- Fixup [\#26](https://github.com/AtomLinter/linter-golinter/pull/26) ([Arcanemagus](https://github.com/Arcanemagus))
+
+**Fixed bugs:**
+
+- Fixup [\#26](https://github.com/AtomLinter/linter-golinter/pull/26) ([Arcanemagus](https://github.com/Arcanemagus))
+
+**Closed issues:**
+
+- Install `linter` automatically. [\#6](https://github.com/AtomLinter/linter-golinter/issues/6)
+
+**Merged pull requests:**
+
+- atom-linter@4.5.0 untested ⚠️ [\#25](https://github.com/AtomLinter/linter-golinter/pull/25) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- atom-package-deps@3.0.8 untested ⚠️ [\#23](https://github.com/AtomLinter/linter-golinter/pull/23) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- atom-linter@4.4.0 untested ⚠️ [\#22](https://github.com/AtomLinter/linter-golinter/pull/22) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- atom-linter@4.3.4 untested ⚠️ [\#21](https://github.com/AtomLinter/linter-golinter/pull/21) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- atom-linter@4.3.3 untested ⚠️ [\#19](https://github.com/AtomLinter/linter-golinter/pull/19) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- atom-linter@4.3.1 untested ⚠️ [\#16](https://github.com/AtomLinter/linter-golinter/pull/16) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Add gitattributes [\#15](https://github.com/AtomLinter/linter-golinter/pull/15) ([Arcanemagus](https://github.com/Arcanemagus))
+- atom-linter@4.3.0 untested ⚠️ [\#14](https://github.com/AtomLinter/linter-golinter/pull/14) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- atom-package-deps@3.0.7 untested ⚠️ [\#13](https://github.com/AtomLinter/linter-golinter/pull/13) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Automatically install the linter package on activation [\#7](https://github.com/AtomLinter/linter-golinter/pull/7) ([zhevron](https://github.com/zhevron))
+
+## [v1.1.0](https://github.com/AtomLinter/linter-golinter/tree/v1.1.0) (2015-12-30)
+[Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.0.0...v1.1.0)
 
 **Closed issues:**
 
