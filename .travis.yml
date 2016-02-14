@@ -1,0 +1,53 @@
+# Project specific config
+matrix:
+  include:
+    - os: linux
+      language: go
+    - os: linux
+      language: go
+      env: ATOM_CHANNEL=beta
+    - os: osx
+      language: generic
+      before_install:
+        - brew update
+        - brew outdated go || brew upgrade go
+        - mkdir -p $HOME/go
+        - export GOPATH="$HOME/go"
+        - export PATH=$PATH:$GOPATH/bin
+    - os: osx
+      language: generic
+      before_install:
+        - brew update
+        - brew outdated go || brew upgrade go
+        - mkdir -p $HOME/go
+        - export GOPATH="$HOME/go"
+        - export PATH=$PATH:$GOPATH/bin
+      env: ATOM_CHANNEL=beta
+
+install:
+  - go get -u github.com/golang/lint/golint
+
+# Generic setup follows
+script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+git:
+  depth: 10
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - build-essential
+    - git
+    - libgnome-keyring-dev
+    - fakeroot
+
+branches:
+  only:
+    - master

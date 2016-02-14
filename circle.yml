@@ -1,0 +1,16 @@
+dependencies:
+  override:
+    - curl -L https://atom.io/download/deb -o atom-amd64.deb
+    - sudo dpkg --install atom-amd64.deb || true
+    - sudo apt-get -f install
+    - apm install
+    - go get -u github.com/golang/lint/golint
+
+test:
+  pre:
+    - atom -v
+    - apm -v
+  override:
+    - ./node_modules/.bin/eslint spec
+    - ./node_modules/.bin/coffeelint lib
+    - apm test
