@@ -22,7 +22,7 @@ describe('The golint provider for Linter', () => {
     let editor = null;
     beforeEach(() => {
       waitsForPromise(() =>
-        atom.workspace.open(errorsPath).then(openEditor => editor = openEditor)
+        atom.workspace.open(errorsPath).then(openEditor => { editor = openEditor; })
       );
     });
 
