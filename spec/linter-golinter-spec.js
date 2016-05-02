@@ -2,12 +2,12 @@
 
 import * as path from 'path';
 
+const lint = require(path.join('..', 'lib', 'init.coffee')).provideLinter().lint;
+
 const goodPath = path.join(__dirname, 'fixtures', 'good.go');
 const errorsPath = path.join(__dirname, 'fixtures', 'errors.go');
 
 describe('The golint provider for Linter', () => {
-  const lint = require(path.join('..', 'lib', 'init.coffee')).provideLinter().lint;
-
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();
     waitsForPromise(() => {
