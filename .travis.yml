@@ -3,8 +3,10 @@ matrix:
   include:
     - os: linux
       language: go
+      go: 1.6.2
     - os: linux
       language: go
+      go: 1.6.2
       env: ATOM_CHANNEL=beta
     - os: osx
       language: generic
@@ -39,6 +41,7 @@ git:
   depth: 10
 
 sudo: false
+group: edge
 
 addons:
   apt:
