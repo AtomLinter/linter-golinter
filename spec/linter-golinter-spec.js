@@ -38,15 +38,10 @@ describe('The golint provider for Linter', () => {
       waitsForPromise(() => {
         const messageText = 'error var unexp should have name of the form errFoo';
         return lint(editor).then(messages => {
-          expect(messages[0].type).toBeDefined();
-          expect(messages[0].type).toEqual('Warning');
-          expect(messages[0].text).toBeDefined();
-          expect(messages[0].text).toEqual(messageText);
-          expect(messages[0].filePath).toBeDefined();
-          expect(messages[0].filePath).toMatch(/.+errors\.go$/);
-          expect(messages[0].range).toBeDefined();
-          expect(messages[0].range.length).toBeDefined();
-          expect(messages[0].range.length).toEqual(2);
+          expect(messages[0].type).toBe('Warning');
+          expect(messages[0].html).not.toBeDefined();
+          expect(messages[0].text).toBe(messageText);
+          expect(messages[0].filePath).toBe(errorsPath);
           expect(messages[0].range).toEqual([[12, 4], [12, 83]]);
         });
       });
@@ -57,7 +52,7 @@ describe('The golint provider for Linter', () => {
     waitsForPromise(() =>
       atom.workspace.open(goodPath).then(editor =>
         lint(editor).then(messages =>
-          expect(messages.length).toEqual(0)
+          expect(messages.length).toBe(0)
         )
       )
     );
