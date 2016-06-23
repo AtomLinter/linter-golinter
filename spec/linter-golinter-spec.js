@@ -42,7 +42,7 @@ describe('The golint provider for Linter', () => {
           expect(messages[0].html).not.toBeDefined();
           expect(messages[0].text).toBe(messageText);
           expect(messages[0].filePath).toBe(errorsPath);
-          expect(messages[0].range).toEqual([[12, 4], [12, 83]]);
+          expect(messages[0].range).toEqual([[12, 4], [12, 9]]);
         });
       });
     });
