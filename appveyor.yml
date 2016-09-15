@@ -1,6 +1,6 @@
-# Package specific options
+### Project specific config ###
 environment:
-  GOPATH: c:\gopath
+  GOPATH: C:\gopath
   matrix:
   - ATOM_CHANNEL: stable
   - ATOM_CHANNEL: beta
@@ -14,29 +14,26 @@ init:
     }
 
 install:
-  - rmdir c:\go /s /q
+  - rmdir C:\go /s /q
   - appveyor DownloadFile https://storage.googleapis.com/golang/go1.5.windows-amd64.msi
   - msiexec /i go1.5.windows-amd64.msi /q
   - go version
   - go env
-  - mkdir c:\gopath
+  - mkdir C:\gopath
   - go get -u github.com/golang/lint/golint
   - SET PATH=%GOPATH%\bin;%PATH%
 
-# General setup
-before_build:
-  - ps: Install-Product node 5
-
+### Generic setup follows ###
 build_script:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/atom/ci/master/build-package.ps1'))
-
-version: "{build}"
-
-platform: x64
 
 branches:
   only:
     - master
 
+version: "{build}"
+platform: x64
+clone_depth: 10
+skip_tags: true
 test: off
 deploy: off

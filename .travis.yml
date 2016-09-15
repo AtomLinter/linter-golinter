@@ -1,13 +1,15 @@
-# Project specific config
+### Project specific config ###
 matrix:
   include:
     - os: linux
       language: go
       go: 1.6.2
+
     - os: linux
       language: go
       go: 1.6.2
       env: ATOM_CHANNEL=beta
+
     - os: osx
       language: generic
       before_install:
@@ -16,6 +18,7 @@ matrix:
         - mkdir -p $HOME/go
         - export GOPATH="$HOME/go"
         - export PATH=$PATH:$GOPATH/bin
+
     - os: osx
       language: generic
       before_install:
@@ -29,7 +32,7 @@ matrix:
 install:
   - go get -u github.com/golang/lint/golint
 
-# Generic setup follows
+### Generic setup follows ###
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
 
 notifications:
@@ -37,11 +40,14 @@ notifications:
     on_success: never
     on_failure: change
 
+branches:
+  only:
+    - master
+
 git:
   depth: 10
 
 sudo: false
-group: edge
 
 addons:
   apt:
@@ -50,7 +56,3 @@ addons:
     - git
     - libgnome-keyring-dev
     - fakeroot
-
-branches:
-  only:
-    - master
