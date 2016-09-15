@@ -22,7 +22,7 @@ describe('The golint provider for Linter', () => {
     let editor = null;
     beforeEach(() => {
       waitsForPromise(() =>
-        atom.workspace.open(errorsPath).then(openEditor => { editor = openEditor; })
+        atom.workspace.open(errorsPath).then((openEditor) => { editor = openEditor; })
       );
     });
 
@@ -37,7 +37,7 @@ describe('The golint provider for Linter', () => {
     it('verifies the first message', () => {
       waitsForPromise(() => {
         const messageText = 'error var unexp should have name of the form errFoo';
-        return lint(editor).then(messages => {
+        return lint(editor).then((messages) => {
           expect(messages[0].type).toBe('Warning');
           expect(messages[0].html).not.toBeDefined();
           expect(messages[0].text).toBe(messageText);
