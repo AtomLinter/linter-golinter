@@ -2,7 +2,7 @@
 
 import * as path from 'path';
 
-const lint = require('../lib/init.coffee').provideLinter().lint;
+const lint = require('../lib/main.js').provideLinter().lint;
 
 const goodPath = path.join(__dirname, 'fixtures', 'good.go');
 const errorsPath = path.join(__dirname, 'fixtures', 'errors.go');
