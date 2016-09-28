@@ -6,6 +6,7 @@
 **Implemented enhancements:**
 
 - Implement specs [\#18](https://github.com/AtomLinter/linter-golinter/issues/18)
+- Install `linter` automatically. [\#6](https://github.com/AtomLinter/linter-golinter/issues/6)
 - Add CI Configurations [\#28](https://github.com/AtomLinter/linter-golinter/pull/28) ([Arcanemagus](https://github.com/Arcanemagus))
 - Add specs [\#27](https://github.com/AtomLinter/linter-golinter/pull/27) ([Arcanemagus](https://github.com/Arcanemagus))
 - Fixup [\#26](https://github.com/AtomLinter/linter-golinter/pull/26) ([Arcanemagus](https://github.com/Arcanemagus))
@@ -13,10 +14,6 @@
 **Fixed bugs:**
 
 - Fixup [\#26](https://github.com/AtomLinter/linter-golinter/pull/26) ([Arcanemagus](https://github.com/Arcanemagus))
-
-**Closed issues:**
-
-- Install `linter` automatically. [\#6](https://github.com/AtomLinter/linter-golinter/issues/6)
 
 **Merged pull requests:**
 
@@ -34,9 +31,8 @@
 ## [v1.1.0](https://github.com/AtomLinter/linter-golinter/tree/v1.1.0) (2015-12-30)
 [Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.0.0...v1.1.0)
 
-**Closed issues:**
+**Fixed bugs:**
 
-- Uncaught Error: spawn EACCES [\#5](https://github.com/AtomLinter/linter-golinter/issues/5)
 - Not linting on Mac OS X and Atom 1.0.0 [\#3](https://github.com/AtomLinter/linter-golinter/issues/3)
 - Object.activate is deprecated. [\#2](https://github.com/AtomLinter/linter-golinter/issues/2)
 - Upcoming linter changes [\#1](https://github.com/AtomLinter/linter-golinter/issues/1)
