@@ -1,7 +1,36 @@
 # Change Log
 
-## [1.2.0](https://github.com/AtomLinter/linter-golinter/tree/1.2.0) (2016-02-13)
-[Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.1.0...1.2.0)
+## [v1.2.1](https://github.com/AtomLinter/linter-golinter/tree/v1.2.1) (2016-09-28)
+[Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.2.0...v1.2.1)
+
+**Implemented enhancements:**
+
+- Rewrite in ES2015 [\#81](https://github.com/AtomLinter/linter-golinter/pull/81) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint-config-airbnb-base to version 8.0.0 🚀 [\#80](https://github.com/AtomLinter/linter-golinter/pull/80) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update CI configuration [\#79](https://github.com/AtomLinter/linter-golinter/pull/79) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint to version 3.5.0 🚀 [\#76](https://github.com/AtomLinter/linter-golinter/pull/76) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 8.0.0 🚀 [\#73](https://github.com/AtomLinter/linter-golinter/pull/73) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 7.0.0 🚀 [\#62](https://github.com/AtomLinter/linter-golinter/pull/62) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 6.0.0 🚀 [\#53](https://github.com/AtomLinter/linter-golinter/pull/53) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update eslint-config-airbnb-base to version 3.0.1 🚀 [\#52](https://github.com/AtomLinter/linter-golinter/pull/52) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 5.0.1 🚀 [\#51](https://github.com/AtomLinter/linter-golinter/pull/51) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Move to eslint-config-airbnb-base and fix CI [\#46](https://github.com/AtomLinter/linter-golinter/pull/46) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint to version 2.2.0 🚀 [\#32](https://github.com/AtomLinter/linter-golinter/pull/32) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+**Fixed bugs:**
+
+- Add explicit Go version [\#48](https://github.com/AtomLinter/linter-golinter/pull/48) ([kavu](https://github.com/kavu))
+
+**Merged pull requests:**
+
+- eslint@2.4.0 breaks build 🚨 [\#39](https://github.com/AtomLinter/linter-golinter/pull/39) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update AppVeyor config [\#37](https://github.com/AtomLinter/linter-golinter/pull/37) ([Arcanemagus](https://github.com/Arcanemagus))
+- Force an apt update [\#36](https://github.com/AtomLinter/linter-golinter/pull/36) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update babel-eslint to version 5.0.0 🚀 [\#31](https://github.com/AtomLinter/linter-golinter/pull/31) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-package-deps to version 4.0.1 🚀 [\#30](https://github.com/AtomLinter/linter-golinter/pull/30) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+## [v1.2.0](https://github.com/AtomLinter/linter-golinter/tree/v1.2.0) (2016-02-14)
+[Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.1.0...v1.2.0)
 
 **Implemented enhancements:**
 

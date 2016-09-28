@@ -1,7 +1,7 @@
 {
   "name": "linter-golinter",
   "main": "lib/main.js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Check Go files with golint tool",
   "keywords": [
     "go",
