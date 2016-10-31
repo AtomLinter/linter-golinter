@@ -32,10 +32,10 @@
   "homepage": "https://github.com/AtomLinter/linter-golinter",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.4.0 <2.0.0"
   },
   "scripts": {
-    "lint": "coffeelint lib && eslint spec",
+    "lint": "eslint .",
     "test": "apm test"
   },
   "dependencies": {
