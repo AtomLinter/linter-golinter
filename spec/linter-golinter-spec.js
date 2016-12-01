@@ -13,7 +13,7 @@ describe('The golint provider for Linter', () => {
     waitsForPromise(() => {
       atom.packages.activatePackage('linter-golinter');
       return atom.packages.activatePackage('language-go').then(() =>
-        atom.workspace.open(goodPath)
+        atom.workspace.open(goodPath),
       );
     });
   });
@@ -22,15 +22,15 @@ describe('The golint provider for Linter', () => {
     let editor = null;
     beforeEach(() => {
       waitsForPromise(() =>
-        atom.workspace.open(errorsPath).then((openEditor) => { editor = openEditor; })
+        atom.workspace.open(errorsPath).then((openEditor) => { editor = openEditor; }),
       );
     });
 
     it('finds at least one message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages =>
-          expect(messages.length).toBeGreaterThan(0)
-        )
+          expect(messages.length).toBeGreaterThan(0),
+        ),
       );
     });
 
@@ -52,9 +52,9 @@ describe('The golint provider for Linter', () => {
     waitsForPromise(() =>
       atom.workspace.open(goodPath).then(editor =>
         lint(editor).then(messages =>
-          expect(messages.length).toBe(0)
-        )
-      )
+          expect(messages.length).toBe(0),
+        ),
+      ),
     );
   });
 });
