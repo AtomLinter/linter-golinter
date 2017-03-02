@@ -8,7 +8,7 @@ with files that have the `Go` syntax.
 
   1. [Install Go](https://golang.org/doc/install) for your system.
   
-  2. Install `golint` per the instructions at its [repo]((https://github.com/golang/lint)):
+  2. Install `golint` per the instructions at its [repo](https://github.com/golang/lint).
 
 ## Installation
 
