@@ -10,15 +10,6 @@ matrix:
       go: 1.6.2
       env: ATOM_CHANNEL=beta
 
-    - os: osx
-      language: generic
-      before_install:
-        - brew update
-        - brew outdated go || brew upgrade go
-        - mkdir -p $HOME/go
-        - export GOPATH="$HOME/go"
-        - export PATH=$PATH:$GOPATH/bin
-
 install:
   - go get -u github.com/golang/lint/golint
 
