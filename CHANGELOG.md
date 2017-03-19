@@ -1,5 +1,23 @@
 # Change Log
 
+## [v1.2.2](https://github.com/AtomLinter/linter-golinter/tree/v1.2.2) (2017-03-18)
+[Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.2.1...v1.2.2)
+
+**Implemented enhancements:**
+
+- Update CI configuration [\#102](https://github.com/AtomLinter/linter-golinter/pull/102) ([Arcanemagus](https://github.com/Arcanemagus))
+- Add info about installation for beginners [\#100](https://github.com/AtomLinter/linter-golinter/pull/100) ([jsejcksn](https://github.com/jsejcksn))
+- Update atom-linter to the latest version 🚀 [\#99](https://github.com/AtomLinter/linter-golinter/pull/99) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Update dependencies to enable Greenkeeper 🌴 [\#94](https://github.com/AtomLinter/linter-golinter/pull/94) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- chore\(package\): update eslint-config-airbnb-base to version 10.0.1 [\#92](https://github.com/AtomLinter/linter-golinter/pull/92) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update dependencies to enable Greenkeeper 🌴 [\#87](https://github.com/AtomLinter/linter-golinter/pull/87) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+
+**Fixed bugs:**
+
+- Fix weird typo [\#101](https://github.com/AtomLinter/linter-golinter/pull/101) ([jsejcksn](https://github.com/jsejcksn))
+- Minor fixes [\#88](https://github.com/AtomLinter/linter-golinter/pull/88) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update CI configuration [\#84](https://github.com/AtomLinter/linter-golinter/pull/84) ([Arcanemagus](https://github.com/Arcanemagus))
+
 ## [v1.2.1](https://github.com/AtomLinter/linter-golinter/tree/v1.2.1) (2016-09-28)
 [Full Changelog](https://github.com/AtomLinter/linter-golinter/compare/v1.2.0...v1.2.1)
 
