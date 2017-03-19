@@ -7,7 +7,7 @@ matrix:
 
     - os: linux
       language: go
-      go: 1.6.2
+      go: 1.x
       env: ATOM_CHANNEL=beta
 
 install:
