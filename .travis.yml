@@ -17,6 +17,7 @@ install:
 ### Generic setup follows ###
 dist: trusty
 sudo: required
+group: sugilite
 
 script:
   - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
