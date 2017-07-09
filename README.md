@@ -1,5 +1,7 @@
 # linter-golinter
 
+[![Build Status](https://travis-ci.org/AtomLinter/linter-golinter.svg?branch=master)](https://travis-ci.org/AtomLinter/linter-golinter)
+
 This plugin for [Linter][linter] provides an interface to the
 [golint](https://github.com/golang/lint) tool. It will be used
 with files that have the `Go` syntax.
@@ -31,8 +33,8 @@ your `~/.atom/config.cson` file (choose Open Your Config in Atom menu):
 > Add your [`GOPATH`](https://github.com/golang/go/wiki/GOPATH) binaries directory to your `PATH`. If you installed `Go` to the default location, you can use this shell command to add it to your `.bashrc` file:
 > 
 > ```bash
-printf "\nexport PATH=\$PATH:\$HOME/go/bin\n" >> $HOME/.bashrc
-```
+> printf "\nexport PATH=\$PATH:\$HOME/go/bin\n" >> $HOME/.bashrc
+> ```
 > 
 > This should prevent needing to set the `golint` executable path.
 
