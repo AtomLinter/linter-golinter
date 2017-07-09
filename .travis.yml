@@ -3,17 +3,22 @@ matrix:
   include:
     - os: linux
       language: go
-      go: 1.6.2
+      go: 1.8
+      env: ATOM_CHANNEL=stable
 
     - os: linux
       language: go
-      go: 1.x
+      go: 1.8
       env: ATOM_CHANNEL=beta
 
 install:
   - go get -u github.com/golang/lint/golint
 
 ### Generic setup follows ###
+dist: trusty
+sudo: required
+group: sugilite
+
 script:
   - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
   - chmod u+x build-package.sh
@@ -32,12 +37,10 @@ branches:
 git:
   depth: 10
 
-sudo: false
-
 addons:
   apt:
     packages:
     - build-essential
-    - git
-    - libgnome-keyring-dev
     - fakeroot
+    - git
+    - libsecret-1-dev
