@@ -11,6 +11,16 @@ matrix:
       go: 1.8
       env: ATOM_CHANNEL=beta
 
+    - os: osx
+      language: go
+      go: 1.8
+      env: ATOM_CHANNEL=stable
+
+    - os: osx
+      language: go
+      go: 1.8
+      env: ATOM_CHANNEL=beta
+
 install:
   - go get -u github.com/golang/lint/golint
 
