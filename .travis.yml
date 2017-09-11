@@ -8,17 +8,7 @@ matrix:
 
     - os: linux
       language: go
-      go: 1.8
-      env: ATOM_CHANNEL=beta
-
-    - os: osx
-      language: go
-      go: 1.8
-      env: ATOM_CHANNEL=stable
-
-    - os: osx
-      language: go
-      go: 1.8
+      go: 1.9
       env: ATOM_CHANNEL=beta
 
 install:
