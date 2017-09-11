@@ -2,7 +2,7 @@
 
 import * as path from 'path';
 
-const lint = require('../lib/main.js').provideLinter().lint;
+const { lint } = require('../lib/main.js').provideLinter();
 
 const goodPath = path.join(__dirname, 'fixtures', 'good.go');
 const errorsPath = path.join(__dirname, 'fixtures', 'errors.go');
@@ -13,8 +13,7 @@ describe('The golint provider for Linter', () => {
     waitsForPromise(() => {
       atom.packages.activatePackage('linter-golinter');
       return atom.packages.activatePackage('language-go').then(() =>
-        atom.workspace.open(goodPath),
-      );
+        atom.workspace.open(goodPath));
     });
   });
 
@@ -22,16 +21,13 @@ describe('The golint provider for Linter', () => {
     let editor = null;
     beforeEach(() => {
       waitsForPromise(() =>
-        atom.workspace.open(errorsPath).then((openEditor) => { editor = openEditor; }),
-      );
+        atom.workspace.open(errorsPath).then((openEditor) => { editor = openEditor; }));
     });
 
     it('finds at least one message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages =>
-          expect(messages.length).toBeGreaterThan(0),
-        ),
-      );
+          expect(messages.length).toBeGreaterThan(0)));
     });
 
     it('verifies the first message', () => {
@@ -52,9 +48,6 @@ describe('The golint provider for Linter', () => {
     waitsForPromise(() =>
       atom.workspace.open(goodPath).then(editor =>
         lint(editor).then(messages =>
-          expect(messages.length).toBe(0),
-        ),
-      ),
-    );
+          expect(messages.length).toBe(0))));
   });
 });
