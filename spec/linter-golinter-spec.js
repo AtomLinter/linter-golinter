@@ -6,11 +6,12 @@ const { lint } = require('../lib/main.js').provideLinter();
 
 const goodPath = path.join(__dirname, 'fixtures', 'good.go');
 const errorsPath = path.join(__dirname, 'fixtures', 'errors.go');
+const promiseWaitOpts = { timeout: process.env.CI ? 120000 : 60000 };
 
 describe('The golint provider for Linter', () => {
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();
-    waitsForPromise(() => {
+    waitsForPromise(promiseWaitOpts, () => {
       atom.packages.activatePackage('linter-golinter');
       return atom.packages.activatePackage('language-go').then(() =>
         atom.workspace.open(goodPath));
@@ -20,18 +21,18 @@ describe('The golint provider for Linter', () => {
   describe('checks a file with issues and', () => {
     let editor = null;
     beforeEach(() => {
-      waitsForPromise(() =>
+      waitsForPromise(promiseWaitOpts, () =>
         atom.workspace.open(errorsPath).then((openEditor) => { editor = openEditor; }));
     });
 
     it('finds at least one message', () => {
-      waitsForPromise(() =>
+      waitsForPromise(promiseWaitOpts, () =>
         lint(editor).then(messages =>
           expect(messages.length).toBeGreaterThan(0)));
     });
 
     it('verifies the first message', () => {
-      waitsForPromise(() => {
+      waitsForPromise(promiseWaitOpts, () => {
         const messageText = 'error var unexp should have name of the form errFoo';
         return lint(editor).then((messages) => {
           expect(messages[0].type).toBe('Warning');
@@ -45,7 +46,7 @@ describe('The golint provider for Linter', () => {
   });
 
   it('finds nothing wrong with a valid file', () => {
-    waitsForPromise(() =>
+    waitsForPromise(promiseWaitOpts, () =>
       atom.workspace.open(goodPath).then(editor =>
         lint(editor).then(messages =>
           expect(messages.length).toBe(0))));

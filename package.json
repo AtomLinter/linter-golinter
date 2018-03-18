@@ -9,12 +9,6 @@
     "linter"
   ],
   "configSchema": {
-    "executablePath": {
-      "title": "golint Executable Path",
-      "description": "The path to `golint` executable",
-      "type": "string",
-      "default": "golint"
-    },
     "extraOptions": {
       "title": "Extra Options",
       "description": "Options for `golint` command",
@@ -40,7 +34,8 @@
   },
   "dependencies": {
     "atom-linter": "^10.0.0",
-    "atom-package-deps": "^4.0.1"
+    "atom-package-deps": "^4.0.1",
+    "ngo": "^2.4.4"
   },
   "devDependencies": {
     "eslint": "^4.6.0",
