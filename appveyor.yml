@@ -1,27 +1,8 @@
 ### Project specific config ###
 environment:
-  GOPATH: C:\gopath
   matrix:
   - ATOM_CHANNEL: stable
   - ATOM_CHANNEL: beta
-
-init:
-- ps: >-
-    $app = Get-WmiObject -Class Win32_Product -Filter "Vendor = 'http://golang.org'"
-
-    if ($app) {
-      $app.Uninstall()
-    }
-
-install:
-  - rmdir C:\go /s /q
-  - appveyor DownloadFile https://storage.googleapis.com/golang/go1.7.1.windows-amd64.msi
-  - msiexec /i go1.7.1.windows-amd64.msi /q
-  - go version
-  - go env
-  - mkdir C:\gopath
-  - go get -u github.com/golang/lint/golint
-  - SET PATH=%GOPATH%\bin;%PATH%
 
 ### Generic setup follows ###
 build_script:

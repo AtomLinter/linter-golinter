@@ -2,7 +2,6 @@ dependencies:
   override:
     - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
     - chmod u+x build-package.sh
-    - go get -u github.com/golang/lint/golint
 
 test:
   override:

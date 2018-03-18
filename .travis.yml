@@ -2,17 +2,10 @@
 matrix:
   include:
     - os: linux
-      language: go
-      go: 1.8
       env: ATOM_CHANNEL=stable
 
     - os: linux
-      language: go
-      go: 1.9
       env: ATOM_CHANNEL=beta
-
-install:
-  - go get -u github.com/golang/lint/golint
 
 ### Generic setup follows ###
 dist: trusty
