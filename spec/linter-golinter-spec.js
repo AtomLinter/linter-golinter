@@ -14,7 +14,8 @@ describe('The golint provider for Linter', () => {
     waitsForPromise(promiseWaitOpts, () => {
       atom.packages.activatePackage('linter-golinter');
       return atom.packages.activatePackage('language-go').then(() =>
-        atom.workspace.open(goodPath));
+        atom.workspace.open(goodPath).then(editor =>
+          lint(editor)));
     });
   });
 
