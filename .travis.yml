@@ -3,12 +3,12 @@ matrix:
   include:
     - os: linux
       language: go
-      go: 1.10
+      go: "1.10"
       env: ATOM_CHANNEL=stable
 
     - os: linux
       language: go
-      go: 1.10
+      go: "1.10"
       env: ATOM_CHANNEL=beta
 
 install:
