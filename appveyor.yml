@@ -15,8 +15,8 @@ init:
 
 install:
   - rmdir C:\go /s /q
-  - appveyor DownloadFile https://storage.googleapis.com/golang/go1.7.1.windows-amd64.msi
-  - msiexec /i go1.7.1.windows-amd64.msi /q
+  - appveyor DownloadFile https://storage.googleapis.com/golang/go1.10.windows-amd64.msi
+  - msiexec /i go1.10.windows-amd64.msi /q
   - go version
   - go env
   - mkdir C:\gopath
