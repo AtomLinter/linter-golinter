@@ -20,7 +20,7 @@ install:
   - go version
   - go env
   - mkdir C:\gopath
-  - go get -u github.com/golang/lint/golint
+  - go get -u golang.org/x/lint/golint
   - SET PATH=%GOPATH%\bin;%PATH%
 
 ### Generic setup follows ###
