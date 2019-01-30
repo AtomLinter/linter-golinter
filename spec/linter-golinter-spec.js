@@ -12,22 +12,22 @@ describe('The golint provider for Linter', () => {
     atom.workspace.destroyActivePaneItem();
     waitsForPromise(() => {
       atom.packages.activatePackage('linter-golinter');
-      return atom.packages.activatePackage('language-go').then(() =>
-        atom.workspace.open(goodPath));
+      return atom.packages.activatePackage('language-go').then(() => atom.workspace.open(goodPath));
     });
   });
 
   describe('checks a file with issues and', () => {
     let editor = null;
     beforeEach(() => {
-      waitsForPromise(() =>
-        atom.workspace.open(errorsPath).then((openEditor) => { editor = openEditor; }));
+      waitsForPromise(() => (
+        atom.workspace.open(errorsPath).then((openEditor) => { editor = openEditor; })
+      ));
     });
 
     it('finds at least one message', () => {
-      waitsForPromise(() =>
-        lint(editor).then(messages =>
-          expect(messages.length).toBeGreaterThan(0)));
+      waitsForPromise(() => (
+        lint(editor).then(messages => expect(messages.length).toBeGreaterThan(0))
+      ));
     });
 
     it('verifies the first message', () => {
@@ -46,9 +46,10 @@ describe('The golint provider for Linter', () => {
   });
 
   it('finds nothing wrong with a valid file', () => {
-    waitsForPromise(() =>
-      atom.workspace.open(goodPath).then(editor =>
-        lint(editor).then(messages =>
-          expect(messages.length).toBe(0))));
+    waitsForPromise(() => (
+      atom.workspace.open(goodPath).then(editor => (
+        lint(editor).then(messages => expect(messages.length).toBe(0))
+      ))
+    ));
   });
 });
