@@ -34,11 +34,12 @@ describe('The golint provider for Linter', () => {
       waitsForPromise(() => {
         const messageText = 'error var unexp should have name of the form errFoo';
         return lint(editor).then((messages) => {
-          expect(messages[0].type).toBe('Warning');
-          expect(messages[0].html).not.toBeDefined();
-          expect(messages[0].text).toBe(messageText);
-          expect(messages[0].filePath).toBe(errorsPath);
-          expect(messages[0].range).toEqual([[12, 4], [12, 9]]);
+          expect(messages[0].severity).toBe('warning');
+          expect(messages[0].url).not.toBeDefined();
+          expect(messages[0].description).not.toBeDefined();
+          expect(messages[0].excerpt).toBe(messageText);
+          expect(messages[0].location.file).toBe(errorsPath);
+          expect(messages[0].location.position).toEqual([[12, 4], [12, 9]]);
         });
       });
     });
