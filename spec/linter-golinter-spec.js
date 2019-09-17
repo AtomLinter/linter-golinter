@@ -26,7 +26,7 @@ describe('The golint provider for Linter', () => {
 
     it('finds at least one message', () => {
       waitsForPromise(() => (
-        lint(editor).then(messages => expect(messages.length).toBeGreaterThan(0))
+        lint(editor).then((messages) => expect(messages.length).toBeGreaterThan(0))
       ));
     });
 
@@ -47,8 +47,8 @@ describe('The golint provider for Linter', () => {
 
   it('finds nothing wrong with a valid file', () => {
     waitsForPromise(() => (
-      atom.workspace.open(goodPath).then(editor => (
-        lint(editor).then(messages => expect(messages.length).toBe(0))
+      atom.workspace.open(goodPath).then((editor) => (
+        lint(editor).then((messages) => expect(messages.length).toBe(0))
       ))
     ));
   });
